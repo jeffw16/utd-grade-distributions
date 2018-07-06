@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
     var xhr = new XMLHttpRequest();
-    // xhr.open('GET', 'https://cdn.rawgit.com/jeffw16/unt-grade-distributions/b0b7e7eec9cc282f1a3b37f428275e6ae962c3d1/static/complete.json', true);
-    xhr.open('GET', 'https://www.google.com/blank.html', true);
+    xhr.open('GET', 'https://cdn.rawgit.com/jeffw16/utd-grade-distributions/65ed071d0d24725bb698f2f905b8b2ae626c5fe4/static/complete.json', true);
+    // xhr.open('GET', 'https://www.google.com/blank.html', true);
     xhr.responseType = 'json';
     // console.log('started loading db');
     xhr.onload = function(e) {
