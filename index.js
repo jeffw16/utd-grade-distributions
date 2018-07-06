@@ -53,7 +53,7 @@ function findClasses() {
         .exec((err, docs) => {
             // console.log(docs);
             if(docs.length == 0){
-                select_result.innerHTML = "No results were found. Try modifying your query. While we strive to keep a complete record, there may be some deficiencies in what the registrar provides us.";
+                select_result.innerHTML = "No results were found. Try modifying your query. While we strive to keep a complete record, we do not have data on certain classes with low enrollment due to FERPA regulations.";
             } else {
                 select_result.innerHTML = "";
                 for ( var i = 0; i < docs.length; i++ ) {
@@ -83,7 +83,7 @@ function generateQuery() {
 }
 
 function formatResult( result ) {
-    return result.subj + " " + result.num + "." + result.sect + " " + result.desc + " (" + result.prof + ") - " + result.term;
+    return result.subj + " " + result.num + "." + result.sect + " (" + result.prof + ") - " + result.term;
 }
 
 function randomColor() {
@@ -97,7 +97,7 @@ function randomColor() {
 }
 
 function compileChart( result ) {
-    var {term, subj, num, sect, desc, prof, grades} = result;
+    var {term, subj, num, sect, prof, grades} = result;
     var total = Object.values(grades).reduce((a, b) => a+parseInt(b), 0);
     var colors = ['#30c737', '#93d10d', '#ffe14d', '#ffad33', '#ff704d', '#f518a9', '#a851a8', '#96d529'];
     var myChart = Highcharts.chart('chart', {
@@ -105,10 +105,10 @@ function compileChart( result ) {
           type: 'column'
         },
         title: {
-          text: subj + ' ' + num + '.' + sect + ' (' + prof + ')'
+          text: subj + ' ' + num + '.' + sect
         },
         subtitle:{
-          text: desc + ' - ' + term
+          text: prof + ' - ' + term
         },
         legend: {
           enabled: false
