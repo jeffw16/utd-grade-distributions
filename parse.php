@@ -4,9 +4,9 @@
  * @author Jeffrey Wang (@jeffw16)
 */
 
-$csv_filename = 'UT Dallas Fall 2017 Grade Distributions';
-$json_filename = 'fall2017';
-$term = '2017 Fall';
+$csv_filename = 'UT Dallas Summer 2018 Grade Distributions';
+$json_filename = 'summer2018';
+$term = '2018 Summer';
 
 $res_csv = fopen( 'static/' . $csv_filename . '.csv', 'r' );
 $res_json = fopen( 'static/' . $json_filename . '.json', 'w' );
