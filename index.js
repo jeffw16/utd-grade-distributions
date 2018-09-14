@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://cdn.rawgit.com/jeffw16/utd-grade-distributions/2c0c616dfaba7d4bebe06f97d9ef1b212e66de84/static/summer2018.json', true);
+    xhr.open('GET', 'https://cdn.rawgit.com/jeffw16/utd-grade-distributions/2c0c616dfaba7d4bebe06f97d9ef1b212e66de84/static/complete.json', true);
     // xhr.open('GET', 'https://www.google.com/blank.html', true);
     xhr.responseType = 'json';
     // console.log('started loading db');
